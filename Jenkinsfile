@@ -1,9 +1,10 @@
 pipeline {
   agent { label 'jdk9' }
-  stages {
+  environment { GNAME='Alfonso' }
+    stages {
     stage('GreetVersion') {
       steps {
-        echo 'Hello'
+        echo 'Hello'+env.GNAME
         sh 'java -version'
       }
     }
