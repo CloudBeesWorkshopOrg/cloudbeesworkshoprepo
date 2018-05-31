@@ -1,19 +1,10 @@
 pipeline {
   agent any
   stages {
-    stage('Greet and Version') {
-      parallel {
-        stage('Greet') {
-          steps {
-            echo 'Hello'
-          }
-        }
-        stage('error') {
-          steps {
-            echo 'Hello'
-            sh 'java -version'
-          }
-        }
+    stage('GreetVersion') {
+      steps {
+        echo 'Hello'
+        sh 'java -version'
       }
     }
   }
