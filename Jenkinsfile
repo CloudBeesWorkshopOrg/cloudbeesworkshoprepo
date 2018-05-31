@@ -1,5 +1,5 @@
 pipeline {
-  agent { label jdk9 }
+  agent { label 'jdk9' }
   stages {
     stage('GreetVersion') {
       steps {
